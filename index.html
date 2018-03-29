@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="icon" href="img/favicon.png">
+
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+  <link rel="stylesheet" href="css/body.css">
+  <link rel="stylesheet" href="css/section.css">
+  <link rel="stylesheet" href="css/welcome.css">
+  <link rel="stylesheet" href="css/first.css">
+  <link rel="stylesheet" href="css/romain.css">
+  <link rel="stylesheet" href="css/longueurs.css">
+  <link rel="stylesheet" href="css/masse.css">
+  <link rel="stylesheet" href="css/monnaie.css">
+
+  <meta name="twitter:title" content="ConvertMania">
+  <meta name="twitter:description" content="Application de convertisseurs en ligne !">
+  <meta name="twitter:image" content="img/card.png">
+  <meta property="og:title" content="ConvertMania">
+  <meta property="og:description" content="Application de convertisseurs en ligne !">
+  <meta property="og:image" content="http://convertmania.foxhub.eu/img/card.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+
+  <title>ConvertMania</title>
+</head>
+
+<body class="color5">
+
+  <section>
+    <!-- Section Welcome -->
+      <div class="welcome" style="display:none">
+        <h1>ConvertMania</h1>
+        <button type="button" class="btn btn-secondary btn-lg start">Nos Convertisseurs</button>
+      </div>
+    <!-- Section First -->
+    <div class="first" style="display:none">
+      <h1>Liste des Convertisseurs</h1>
+      <button type="button" class="btn btn-secondary btn-lg start-deci">Décimal en romain</button>
+      <button type="button" class="btn btn-secondary btn-lg start-long">Longueurs</button>
+      <button type="button" class="btn btn-secondary btn-lg start-masse">Masse</button>
+      <button type="button" class="btn btn-secondary btn-lg start-monnaie">Monnaie</button>
+    </div>
+    <!-- Section Romain -->
+    <div class="romain" style="display:none">
+      <h1>Convertisseur Romain</h1>
+      <div class="input-group input-group-lg">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-lg">Décimal</span>
+        </div>
+        <input type="number" class="form-control" id="Decimal" aria-label="Large" aria-describedby="inputGroup-sizing-sm" onkeyup="deleteromain(); autowriteconvert();" onclick="deleteromain(); autowriteconvert();">
+      </div>
+      <div class="input-group input-group-lg">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-lg">Romain</span>
+        </div>
+        <input type="text" class="form-control" id="Romain" aria-label="Large" aria-describedby="inputGroup-sizing-sm" disabled>
+      </div>
+    </div>
+    <!-- Section Longeurs -->
+    <div class="longueurs" style="display:none">
+      <h1>Convertisseur de Longueurs</h1>
+
+      <div class="input-group input-group-lg groupe1">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-lg">Valeur n°1</span>
+        </div>
+        <input type="number" class="form-control" id="chmp1" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+      </div>
+
+      <div class="btn-group btn-group-toggle d-flex justify-content-center choix" data-toggle="buttons" id="choice1">
+        <label class="btn btn-secondary" id="mm">
+          <input type="radio" name="options" autocomplete="off">mm
+        </label>
+        <label class="btn btn-secondary" id="cm">
+          <input type="radio" name="options" autocomplete="off"> cm
+        </label>
+        <label class="btn btn-secondary" id="dm">
+          <input type="radio" name="options" autocomplete="off"> dm
+        </label>
+        <label class="btn btn-secondary" id="m">
+          <input type="radio" name="options" autocomplete="off"> m
+        </label>
+        <label class="btn btn-secondary" id="dam">
+          <input type="radio" name="options" autocomplete="off"> dam
+        </label>
+        <label class="btn btn-secondary" id="hm">
+          <input type="radio" name="options" autocomplete="off"> hm
+        </label>
+        <label class="btn btn-secondary" id="km">
+          <input type="radio" name="options" autocomplete="off"> km
+        </label>
+      </div>
+
+      <div class="input-group input-group-lg">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-lg">Valeur n°2</span>
+        </div>
+        <input type="text" class="form-control" id="chmp2" aria-label="Large" aria-describedby="inputGroup-sizing-sm" disabled>
+      </div>
+
+      <div class="btn-group btn-group-toggle d-flex justify-content-center choix" data-toggle="buttons" id="choice2">
+        <label class="btn btn-secondary" id="mm">
+          <input type="radio" name="options" autocomplete="off"> mm
+        </label>
+        <label class="btn btn-secondary" id="cm">
+          <input type="radio" name="options" autocomplete="off"> cm
+        </label>
+        <label class="btn btn-secondary" id="dm">
+          <input type="radio" name="options" autocomplete="off"> dm
+        </label>
+        <label class="btn btn-secondary" id="m">
+          <input type="radio" name="options" autocomplete="off"> m
+        </label>
+        <label class="btn btn-secondary" id="dam">
+          <input type="radio" name="options" autocomplete="off"> dam
+        </label>
+        <label class="btn btn-secondary" id="hm">
+          <input type="radio" name="options" autocomplete="off"> hm
+        </label>
+        <label class="btn btn-secondary" id="km">
+          <input type="radio" name="options" autocomplete="off"> km
+        </label>
+      </div>
+    </div>
+    <!-- Section Masse -->
+    <div class="masse" style="display:none">
+      <h1>Convertisseur de masses</h1>
+
+      <div class="input-group input-group-lg groupe1">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-lg">Valeur n°1</span>
+        </div>
+        <input type="number" class="form-control" id="chmp1" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+      </div>
+
+      <div class="btn-group btn-group-toggle d-flex justify-content-center choix" data-toggle="buttons" id="choice1">
+        <label class="btn btn-secondary" id="mg">
+          <input type="radio" name="options" autocomplete="off">mg
+        </label>
+        <label class="btn btn-secondary" id="cg">
+          <input type="radio" name="options" autocomplete="off"> cg
+        </label>
+        <label class="btn btn-secondary" id="dg">
+          <input type="radio" name="options" autocomplete="off"> dg
+        </label>
+        <label class="btn btn-secondary" id="g">
+          <input type="radio" name="options" autocomplete="off"> g
+        </label>
+        <label class="btn btn-secondary" id="dag">
+          <input type="radio" name="options" autocomplete="off"> dag
+        </label>
+        <label class="btn btn-secondary" id="hg">
+          <input type="radio" name="options" autocomplete="off"> hg
+        </label>
+        <label class="btn btn-secondary" id="kg">
+          <input type="radio" name="options" autocomplete="off"> kg
+        </label>
+      </div>
+
+      <div class="input-group input-group-lg">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-lg">Valeur n°2</span>
+        </div>
+        <input type="text" class="form-control" id="chmp2" aria-label="Large" aria-describedby="inputGroup-sizing-sm" disabled>
+      </div>
+
+      <div class="btn-group btn-group-toggle d-flex justify-content-center choix" data-toggle="buttons" id="choice2">
+        <label class="btn btn-secondary" id="mg">
+          <input type="radio" name="options" autocomplete="off"> mg
+        </label>
+        <label class="btn btn-secondary" id="cg">
+          <input type="radio" name="options" autocomplete="off"> cg
+        </label>
+        <label class="btn btn-secondary" id="dg">
+          <input type="radio" name="options" autocomplete="off"> dg
+        </label>
+        <label class="btn btn-secondary" id="g">
+          <input type="radio" name="options" autocomplete="off"> g
+        </label>
+        <label class="btn btn-secondary" id="dag">
+          <input type="radio" name="options" autocomplete="off"> dag
+        </label>
+        <label class="btn btn-secondary" id="hg">
+          <input type="radio" name="options" autocomplete="off"> hg
+        </label>
+        <label class="btn btn-secondary" id="kg">
+          <input type="radio" name="options" autocomplete="off"> kg
+        </label>
+      </div>
+
+    </div>
+    </div>
+    <!-- Section Monnaie -->
+    <div class="monnaie" style="display:none">
+      <h1>Convertisseur de monnaie</h1>
+
+      <div class="input-group input-group-lg groupe1">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-lg">Valeur n°1</span>
+        </div>
+        <input type="number" class="form-control" id="chmp1" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+      </div>
+
+      <div class="btn-group btn-group-toggle d-flex justify-content-center choix" data-toggle="buttons" id="choice1">
+        <label class="btn btn-secondary" id="euro">
+          <input type="radio" name="options" autocomplete="off"> Euro (€)
+        </label>
+        <label class="btn btn-secondary" id="livre">
+          <input type="radio" name="options" autocomplete="off">Livre Sterling (£)
+        </label>
+        <label class="btn btn-secondary" id="dollar">
+          <input type="radio" name="options" autocomplete="off"> Dollar ($)
+        </label>
+      </div>
+
+      <div class="input-group input-group-lg">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-lg">Valeur n°2</span>
+        </div>
+        <input type="text" class="form-control" id="chmp2" aria-label="Large" aria-describedby="inputGroup-sizing-sm" disabled>
+      </div>
+
+      <div class="btn-group btn-group-toggle d-flex justify-content-center choix" data-toggle="buttons" id="choice2">
+        <label class="btn btn-secondary" id="euro">
+          <input type="radio" name="options" autocomplete="off"> Euro (€)
+        </label>
+        <label class="btn btn-secondary" id="livre">
+          <input type="radio" name="options" autocomplete="off">Livre Sterling (£)
+        </label>
+        <label class="btn btn-secondary" id="dollar">
+          <input type="radio" name="options" autocomplete="off"> Dollar ($)
+        </label>
+      </div>
+
+    </div>
+
+    <div class="colorpicker" style="display:none">
+      <button type="button" class="btn btn-primary color1" data-color="color1"></button>
+      <button type="button" class="btn btn-primary color2" data-color="color2"></button>
+      <button type="button" class="btn btn-primary color3" data-color="color3"></button>
+      <button type="button" class="btn btn-primary color4" data-color="color4"></button>
+      <button type="button" class="btn btn-primary color5" data-color="color5"></button>
+    </div>
+
+    <div class="back" style="display:none">
+      <button type="button" class="btn btn-primary previous" data-previous=""><</button>
+    </div>
+  </section>
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="js/Library-Jquery.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/DtR.js"></script>
+  <script src="js/longueurs.js"></script>
+  <script src="js/masse.js"></script>
+  <script src="js/monnaie.js"></script>
+</body>
+
+</html>
